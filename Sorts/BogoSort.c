@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <stdbool.h>
 
-bool check(int *a, int n)
+bool check_sorted(int *a, int n)
 {
   while ( --n >= 1 ) {
     if ( a[n] < a[n-1] ) return false;
@@ -23,7 +23,7 @@ void shuffle(int *a, int n)
 
 void sort(int *a, int n)
 {
-  while ( !check(a, n) ) shuffle(a, n);
+  while ( !check_sorted(a, n) ) shuffle(a, n);
 }
 
 int main()

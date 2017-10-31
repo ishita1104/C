@@ -5,17 +5,17 @@
 int main(){
 
     int* ARRAY=NULL;
-    int Continue=1; //This is to know if we should continue filling our array
+    int ContinueFilling=1; //This is to know if we should continue filling our array
     int ARRAY_LENGTH=0,isSorted=0,i,TEMPORARY_ELEMENT;
 
     //This code part is for filling our array
-    while(Continue){
+    while(ContinueFilling){
         printf("Enter the value number %d \n",ARRAY_LENGTH+1);
         ARRAY=(int *)realloc(ARRAY,sizeof(int)*(ARRAY_LENGTH));
         scanf("%d",&ARRAY[ARRAY_LENGTH]);
         ARRAY_LENGTH+=1;
         printf("would you enter an other value (1:Continue/0:Sort the actual array)?\n");
-        scanf("%d",&Continue);
+        scanf("%d",&ContinueFilling);
     }
 
     //Then we sort it using Bubble Sort..

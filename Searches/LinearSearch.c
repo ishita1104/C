@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int lin(int *arr, int size, int val){
+int linearsearch(int *arr, int size, int val){
 	int i;
 	for (i = 0; i < size; i++){
 		if (arr[i] == val)
@@ -20,7 +20,7 @@ void main(){
 
 	printf("Enter the value to be searched:\n");
 	scanf("%d", &v);
-	if (lin(a, s, v))
+	if (linearsearch(a, s, v))
 		printf("Value %d is in the array.\n", v);
 	else
 		printf("Value %d is not in the array.\n", v);
